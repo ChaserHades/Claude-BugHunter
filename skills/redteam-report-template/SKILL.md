@@ -1,7 +1,7 @@
 ---
 name: redteam-report-template
-description: Client-facing red-team deliverable format — codifies the Subject / Observations / Description / Impact / Recommendation / PoC structure used for external red-team engagements (not bug-bounty platform reports). Different audience, different tone, different cadence. Built from the Shree Cement deliverable (May 2026) where 14 findings were packaged into a 52KB MD + 2.2MB DOCX with 16 embedded screenshots. Use when the engagement is "external red team for an enterprise client" (not H1/Bugcrowd/Intigriti), when generating the final report, when the client has specified a custom report format, or when packaging findings into DOCX/PDF.
-sources: shree-cement-deliverable, enterprise-redteam-report-conventions
+description: Client-facing red-team deliverable format — codifies the Subject / Observations / Description / Impact / Recommendation / PoC structure used for external red-team engagements (not bug-bounty platform reports). Different audience, different tone, different cadence. Built from a May-2026 engagement deliverable where 14 findings were packaged into a 52KB MD + 2.2MB DOCX with 16 embedded screenshots. Use when the engagement is "external red team for an enterprise client" (not H1/Bugcrowd/Intigriti), when generating the final report, when the client has specified a custom report format, or when packaging findings into DOCX/PDF.
+sources: engagement-2026-05-deliverable, enterprise-redteam-report-conventions
 report_count: 1
 ---
 
@@ -93,7 +93,7 @@ This is the field that distinguishes red-team deliverables from bug-bounty repor
 
 ---
 
-## Mistakes to avoid (from the Shree Cement engagement)
+## Mistakes to avoid (from engagement-2026-05)
 
 ### 1. Don't retract findings that stopped reproducing
 If a finding was confirmed and then stopped working, that is almost always a CLIENT PATCH, not a finding-was-false. The correct response is "Confirmed; patched mid-engagement" with timestamps showing when it broke. See `mid-engagement-ir-detection`.
@@ -235,7 +235,7 @@ Example: hardcoded JWT in APK
 
 | Section | Technical framing | CISO framing | Board framing |
 |---|---|---|---|
-| Impact | "JWT signing key extracted from APK enables forging admin tokens" | "Anyone with the Bangur mobile app can read any customer's invoice" | "A leaked secret in our mobile app lets attackers impersonate users" |
+| Impact | "JWT signing key extracted from APK enables forging admin tokens" | "Anyone with the customer-facing mobile app can read any customer's invoice" | "A leaked secret in our mobile app lets attackers impersonate users" |
 
 The same finding's Impact paragraph should cover both ends — start with the business outcome, then drop into technical detail.
 
@@ -324,7 +324,7 @@ Pre-delivery checklist:
 
 ---
 
-## Real engagement metric (Shree Cement, May 2026)
+## Real engagement metric (engagement-2026-05)
 
 For calibration:
 - 14 findings shipped (2 Critical, 4 High, 5 Medium, 3 Low/Info)
